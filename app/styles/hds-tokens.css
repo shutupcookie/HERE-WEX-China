@@ -1,0 +1,89 @@
+/* =========
+   HDS THEME TOKENS (hard-coded)
+   ========= */
+
+/* LIGHT THEME */
+.hds-web-product-light-theme {
+  --hds-background-primary: #ffffff;
+  --hds-foreground-primary: #111827;
+  --hds-background-secondary: #ffffff;
+  --hds-border-color: #d6dbe1;
+
+
+  /* buttons */
+  --hds-button-primary-text: #0b1b24;
+  --hds-btn-primary-from:#1EF3E4; 
+  --hds-btn-primary-to: #1EF3E4;  
+
+  --hds-button-secondary-text: #111827;
+  --hds-button-secondary-bg: #eef1f4;  
+  --hds-button-secondary-border: #d6dbe1;
+}
+
+/* DARK THEME */
+.hds-web-product-dark-theme {
+  --hds-background-primary: #153947;
+  --hds-foreground-primary: #ffffff;
+  --hds-background-secondary: #ffffff;
+  --hds-border-color: #3b5561;
+
+
+  /* buttons */
+  --hds-button-primary-text: #0b1b24;
+  --hds-btn-primary-from: #1EF3E4;
+  --hds-btn-primary-to: #1EF3E4;
+
+  --hds-button-secondary-text: #0f2b3e;
+  --hds-button-secondary-bg: #d9e2ea;
+  --hds-button-secondary-border: #b7c6d3;
+}
+
+/* =========
+   Utility classes using the tokens
+   ========= */
+.bg-background { background-color: var(--hds-background-primary); }
+.text-foreground { color: var(--hds-foreground-primary); }
+
+.bg-background-secondary {
+  background-color: var(--hds-background-secondary);
+}
+.border-border {
+  border-color: var(--hds-border-color);
+}
+
+
+.btn-base {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: filter .2s ease, opacity .2s ease;
+  text-decoration: none;
+  min-width: 5rem; 
+}
+
+.btn-primary {
+  color: var(--hds-button-primary-text);
+  background-image: linear-gradient(90deg, var(--hds-btn-primary-from), var(--hds-btn-primary-to));
+}
+.btn-primary:hover { filter: brightness(0.95); }
+
+.btn-secondary {
+  color: var(--hds-button-secondary-text);
+  background-color: var(--hds-button-secondary-bg);
+  border: 1px solid var(--hds-button-secondary-border);
+}
+.btn-secondary:hover { opacity: .9; }
+
+:root,
+.hds-web-product-dark-theme {
+  --hds-headline-01-font-size: 3rem;
+  --hds-headline-01-font-family: 'FiraGO', sans-serif;
+  --hds-headline-01-line-height: 1.2;
+  --hds-headline-01-letter-spacing: 0;
+  --hds-headline-01-font-weight: 700;
+
+  --hds-body-01-font-size: 1rem;
+  --hds-cta-font-size: 0.875rem;
+}
